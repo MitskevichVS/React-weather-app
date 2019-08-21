@@ -35,12 +35,11 @@ class ShowWeather extends React.Component {
       <>
         <div>
           <h1>{weather.name}</h1>
-          <p>Humidity:{weather.main.humidity}</p>
-          <p>Max temp:{weather.main.temp_max}</p>
-          <p>Min temp:{weather.main.temp_min}</p>
-          <p>wind:{weather.wind.speed}</p>
+          <p>Humidity:{weather.main.humidity}%</p>
+          <p>Max temp:{weather.main.temp_max}°С</p>
+          <p>Min temp:{weather.main.temp_min}°С</p>
+          <p>wind:{weather.wind.speed} m/s</p>
           <p>Description:{weather.weather[0].description}</p>
-          <div>{weather.weather[0].icon}</div>
         </div>
       </>
     )
