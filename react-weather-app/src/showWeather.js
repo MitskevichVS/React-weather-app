@@ -13,22 +13,16 @@ class ShowWeather extends React.Component {
     const city = this.props.city;
     const key = '5278bebb89d5e1019b04f8a4a1264daa';
     const url = `${address}q=${city}&units=metric&appid=${key}`;
-    console.log(url);
 
     fetch(url)
       .then(responce => responce.json())
       .then(resp => {
-        console.log(resp);
         this.setState({weather: resp})})
   }
 
- 
-
-
   render(){
     const weather = this.state.weather;
-    console.log(weather);
-    if (!weather){
+    if (!weather) {
       return (<p>Wait...</p>)
     } 
     return(

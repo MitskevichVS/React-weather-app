@@ -17,7 +17,6 @@ class MainPage extends React.Component {
     this.setState({city: City});
   }
 
-
   render() {
     return (
       <>
