@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTint, faTemperatureLow, faTemperatureHigh, faWind, faMeteor } from '@fortawesome/free-solid-svg-icons'
 
 class ShowWeather extends React.Component {
   constructor(props) {
@@ -29,11 +31,22 @@ class ShowWeather extends React.Component {
       <>
         <div>
           <h1>{weather.name}</h1>
-          <p>Humidity:{weather.main.humidity}%</p>
-          <p>Max temp:{weather.main.temp_max}°С</p>
-          <p>Min temp:{weather.main.temp_min}°С</p>
-          <p>wind:{weather.wind.speed} m/s</p>
-          <p>Description:{weather.weather[0].description}</p>
+          <p>
+            <FontAwesomeIcon icon={faTint} />
+            Humidity:{weather.main.humidity}%
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faTemperatureHigh} />
+            Max temp:{weather.main.temp_max}°С</p>
+          <p>
+            <FontAwesomeIcon icon={faTemperatureLow} />
+            Min temp:{weather.main.temp_min}°С</p>
+          <p>
+            <FontAwesomeIcon icon={faWind} />
+            wind:{weather.wind.speed} m/s</p>
+          <p>
+            <FontAwesomeIcon icon={faMeteor} />
+            Description:{weather.weather[0].description}</p>
         </div>
       </>
     )
