@@ -41,17 +41,72 @@ $aux-color: #4f4f4f;
         }
       }
     }
+  }
+  
+  .submitButton, .backButton {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #888;
+    background-color: $secondary-color;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .weatherContainer {
+    width: 30%;
 
-    .submitButton {
+    h1 {
+      text-align: center;
+    }
+
+    div {
+      width: 50%;
+      margin: 10px auto;
+      display: flex;
+    }
+
+    svg {
+      margin: 15px;
+    }
+
+    p {
       display: block;
-      margin: 0 auto;
-      border: 1px solid #888;
-      background-color: $secondary-color;
-      padding: 15px 30px;
-      border-radius: 4px;
-      cursor: pointer;
     }
   }
+}
 
+@media only screen and (max-width: 1024px) {
+  #root {
+    .searchForm {
+      width: 70%;
+  
+      .form {
+        width: 50%;
+      }
+    }
+  }
+}
 
+@media only screen and (max-width: 800px) {
+  #root {
+    .searchForm {
+      width: 80%;
+  
+      .form {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #root {
+    .searchForm {
+      width: 100%;
+  
+      .form {
+        width: 80%;
+      }
+    }
+  }
 }

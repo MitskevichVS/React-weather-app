@@ -16,7 +16,7 @@ class SearchForm extends React.Component {
   render() {
     return(
       <div className="searchForm">
-        <h3 className="searchFormHeader">Weather search</h3>
+        <h1 className="searchFormHeader">Weather search</h1>
         <form className="form"onSubmit={(event) => this.props.setCity(event, this.state.receivedCity)}>
           <label>
             <p className="inputLabel">City:</p>

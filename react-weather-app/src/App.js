@@ -23,7 +23,7 @@ class MainPage extends React.Component {
         {
           !this.state.city
           ? <SearchForm setCity={this.setCity}/>
-          : <ShowWeather city={this.state.city}/>
+          : <ShowWeather city={this.state.city} setCity={this.setCity}/>
         }
 
       </>

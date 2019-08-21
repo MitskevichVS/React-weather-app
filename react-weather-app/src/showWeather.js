@@ -24,29 +24,35 @@ class ShowWeather extends React.Component {
 
   render(){
     const weather = this.state.weather;
+    const setCity = this.props.setCity;
     if (!weather) {
       return (<p>Wait...</p>)
     } 
     return(
       <>
-        <div>
+        <div className="weatherContainer">
           <h1>{weather.name}</h1>
-          <p>
+          <div>
             <FontAwesomeIcon icon={faTint} />
-            Humidity:{weather.main.humidity}%
-          </p>
-          <p>
+            <p>Humidity: {weather.main.humidity}%</p>
+          </div>
+          <div>
             <FontAwesomeIcon icon={faTemperatureHigh} />
-            Max temp:{weather.main.temp_max}°С</p>
-          <p>
+            <p>Max temp: {weather.main.temp_max}°С</p>
+          </div>
+          <div>
             <FontAwesomeIcon icon={faTemperatureLow} />
-            Min temp:{weather.main.temp_min}°С</p>
-          <p>
+            <p>Min temp: {weather.main.temp_min}°С</p>
+          </div>
+          <div>
             <FontAwesomeIcon icon={faWind} />
-            wind:{weather.wind.speed} m/s</p>
-          <p>
+            <p>Wind: {weather.wind.speed} m/s</p>
+          </div>
+          <div>
             <FontAwesomeIcon icon={faMeteor} />
-            Description:{weather.weather[0].description}</p>
+            <p>Description: {weather.weather[0].description}</p>
+          </div>
+          <button onClick={event => setCity(event, null)} className="backButton">Go back</button>
         </div>
       </>
     )
