@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import SearchForm from './searchForm';
+import ShowWeather from './showWeather';
+
+class MainPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      city: null,
+    }
+  }
+
+  setCity = (e, City) => {
+    e.preventDefault();
+    console.log(City);
+    this.setState({city: City});
+  }
+
+  render() {
+    return (
+      <>
+        {
+          !this.state.city
+          ? <SearchForm setCity={this.setCity}/>
+          : <ShowWeather city={this.state.city} setCity={this.setCity}/>
+        }
+
+      </>
+    )
+  }
 }
 
-export default App;
+export default MainPage;

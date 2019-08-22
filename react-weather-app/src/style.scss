@@ -1,0 +1,167 @@
+$font-style: Raleway, sans-serif;
+$primary-color: #eff0f2;
+$secondary-color: #fff;
+$aux-color: #4f4f4f;
+
+#root {
+  background-color: $primary-color;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 100% $font-style;
+
+  .searchForm {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    
+
+    .searchFormHeader {
+      text-align: center;
+      margin: 0 0;
+      text-shadow: 3px 2px 4px rgba(79,79,79,0.3);
+    }
+
+    .form {
+      margin: 0 auto;
+      width: 40%;
+
+      label {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+
+        input {
+          height: 20px;
+          width: 100%;
+        }
+
+        .inputLabel {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+  
+  .submitButton, .backButton {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #888;
+    background-color: $secondary-color;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3);
+  }
+  .weatherContainer {
+    width: 30%;
+
+    h1 {
+      text-align: center;
+      text-shadow: 3px 2px 4px rgba(79,79,79,0.51);
+    }
+
+    div {
+      width: 65%;
+      margin: 10px auto;
+      display: flex;
+    }
+
+    svg {
+      margin: 15px;
+    }
+
+    p {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  #root {
+    .weatherContainer {
+      width: 35%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #root {
+    .weatherContainer {
+      width: 45%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #root {
+    .searchForm {
+      width: 70%;
+  
+      .form {
+        width: 50%;
+      }
+    }
+
+    .weatherContainer {
+      width: 55%;
+
+      div {
+        width: 65%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #root {
+    .searchForm {
+      width: 80%;
+  
+      .form {
+        width: 60%;
+      }
+    }
+
+    .weatherContainer {
+      width: 70%;
+
+      div {
+        width: 65%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    .weatherContainer {
+      width: 80%;
+
+      div {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #root {
+    .searchForm {
+      width: 100%;
+  
+      .form {
+        width: 80%;
+      }
+    }
+
+    .weatherContainer {
+      width: 100%;
+
+      div {
+        width: 70%;
+      }
+    }
+  }
+}
