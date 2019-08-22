@@ -10,6 +10,7 @@ class SearchForm extends React.Component {
 
   setCityName = (e) => {
     let City = e.target.value;
+    if (City )
     this.setState({receivedCity: City});
   }
 
@@ -20,7 +21,7 @@ class SearchForm extends React.Component {
         <form className="form"onSubmit={(event) => this.props.setCity(event, this.state.receivedCity)}>
           <label>
             <p className="inputLabel">City:</p>
-            <input type="text" name="name" onChange={this.setCityName}/>
+            <input type="text" name="name" onChange={this.setCityName} pattern="[a-zA-Z]{2,64}" required/>
           </label>
           <input type="submit" value="Search" className="submitButton"/>
         </form>
